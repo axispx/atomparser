@@ -3,10 +3,10 @@ version: 0.0.1
 description: Atom feed parser.
 authors:
   - Ashish Acharya <anarchyrucks@gmail.com>
-hompage: https://github.com/anarchyrucks/atomparser
+homepage: https://github.com/anarchyrucks/atomparser
 
 environment:
-  sdk: "^1.24.3"
+  sdk: ">=1.24.3 <2.0.0"
 
 dependencies:
   xml: "^3.0.0"
