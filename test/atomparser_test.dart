@@ -97,7 +97,7 @@ void main() {
   });
 
   test('Parses a Feed with all possible fields', () {
-    String data = '''
+    String data = r'''
       <?xml version="1.0" encoding="utf-8"?>
       <feed xmlns="http://www.w3.org/2005/Atom">
 
