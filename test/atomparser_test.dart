@@ -163,45 +163,38 @@ void main() {
       ),
       icon: "feedIcon",
       logo: "feedLogo",
-      rights: new DocumentText(
-        "feedRights",
-        type: "html"
-      ),
+      rights: new DocumentText("feedRights", type: "html"),
       subtitle: "feedSubtitle",
       entries: <Entry>[
         new Entry(
-          "entryID",
-          new DocumentText(
-            "entryTitle",
-            type: "text",
-          ),
-          "2003-12-13T18:30:02Z",
-          author: new Person(
-            "entryAuthorName",
-            uri: "entryAuthorUri",
-            email: "entryAuthorEmail",
-          ),
-          content: new Content(
-            "entryContent",
-            type: "html"
-          ),
-          link: new Link(
-            "entryLink",
-          ),
-          summary: new DocumentText(
-            "entrySummary",
-            type: "text",
-          ),
-          category: new Category(
-            "entryCategory",
-            label: "categoryLabel",
-          ),
-          published: "2003-12-13T18:30:02Z",
-          rights: new DocumentText(
-            "entryRights",
-            type: "html",
-          )
-        )
+            "entryID",
+            new DocumentText(
+              "entryTitle",
+              type: "text",
+            ),
+            "2003-12-13T18:30:02Z",
+            author: new Person(
+              "entryAuthorName",
+              uri: "entryAuthorUri",
+              email: "entryAuthorEmail",
+            ),
+            content: new Content("entryContent", type: "html"),
+            link: new Link(
+              "entryLink",
+            ),
+            summary: new DocumentText(
+              "entrySummary",
+              type: "text",
+            ),
+            category: new Category(
+              "entryCategory",
+              label: "categoryLabel",
+            ),
+            published: "2003-12-13T18:30:02Z",
+            rights: new DocumentText(
+              "entryRights",
+              type: "html",
+            ))
       ],
     );
 
@@ -238,7 +231,8 @@ void main() {
     expect(result.entries[0].summary.text, expected.entries[0].summary.text);
     expect(result.entries[0].summary.type, expected.entries[0].summary.type);
     expect(result.entries[0].category.term, expected.entries[0].category.term);
-    expect(result.entries[0].category.label, expected.entries[0].category.label);
+    expect(
+        result.entries[0].category.label, expected.entries[0].category.label);
     expect(result.entries[0].published, expected.entries[0].published);
     expect(result.entries[0].rights.text, expected.entries[0].rights.text);
     expect(result.entries[0].rights.type, expected.entries[0].rights.type);

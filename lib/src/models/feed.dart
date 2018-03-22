@@ -71,7 +71,8 @@ class AtomFeed {
       }
     } catch (e) {
       if (strict) {
-        throw new ArgumentError('AtomFeed missing mandatory link(s) element(s)');
+        throw new ArgumentError(
+            'AtomFeed missing mandatory link(s) element(s)');
       }
     }
 
