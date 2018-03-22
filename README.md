@@ -78,3 +78,11 @@ void main() {
   //      ]
 }
 ```
+
+## Strict mode
+
+As long as the input string provided is a valid XML string, atomparser will attempt to parse it and return a AtomFeed object. In strict mode atomparser instead throws ArgumentErrors for missing mandatory fields [as defined by the [Atom ](https://validator.w3.org/feed/docs/atom.html) spec]. This is useful for testing feeds to ensure they meet the spec, but impractical when dealing with feeds not under your control.
+
+```dart
+AtomFeed feed = parse(xmlString, strict: true);
+```
